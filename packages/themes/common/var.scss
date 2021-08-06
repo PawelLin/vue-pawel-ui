@@ -1,0 +1,30 @@
+/* Color
+-------------------------- */
+$--color-black: #000000 !default;
+$--color-white: #FFFFFF !default;
+$--color-yellow: #FF942F !default;
+$--color-orange: #FF511A !default;
+$--color-blue: #308CF8 !default;
+$--color-green: #46C300 !default;
+$--color-dark-grey: #666666 !default;
+$--color-mid-grey: #999999 !default;
+$--color-grey: #818181 !default;
+$--color-light-grey: #E4E5E6 !default;
+$--color-text-placeholder: #B5B5B5 !default;
+$--color-primary: #272727 !default;
+
+/* Font
+-------------------------- */
+$--font-size-extra-large: 20px !default;
+$--font-size-large: 18px !default;
+$--font-size-medium: 16px !default;
+$--font-size-extra-base: 15px !default;
+$--font-size-base: 14px !default;
+$--font-size-small: 13px !default;
+$--font-size-extra-small: 12px !default;
+
+/* Button
+-------------------------- */
+$--button-background-color-normal: $--color-white !default;
+$--button-background-image-primary: linear-gradient(127deg, $--color-orange 0%, $--color-yellow 100%) !default;
+$--button-background-color-disabled: #D7D7D7 !default;

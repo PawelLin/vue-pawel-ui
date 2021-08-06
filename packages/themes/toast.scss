@@ -1,0 +1,26 @@
+@import 'common/var.scss';
+
+.pw-toast {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 0 14px;
+    width: 205px;
+    text-align: center;
+    color: $--color-white;
+    font-size: $--font-size-extra-base;
+    background: rgba(0, 0, 0, 0.68);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    &-icon {
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+    &-content {
+        line-height: 21px;
+    }
+    &.pw-toast-pic {
+        padding: 25px 0;
+    }
+}

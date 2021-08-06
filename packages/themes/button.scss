@@ -1,0 +1,56 @@
+@import 'common/var.scss';
+
+.pw-button {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 45px;
+    font-size: $--font-size-extra-base;
+    border-radius: 100px;
+    border: none;
+    outline: none;
+    &-default {
+        color: $--color-primary;
+        background-color: $--color-white;
+        &::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            bottom: -50%;
+            left: -50%;
+            border-radius: 100px;
+            border: 1px solid $--button-background-color-disabled;
+            transform: scale(0.5);
+        }
+    }
+    &-primary {
+        color: $--color-white;
+        background-image: $--button-background-image-primary;
+    }
+    &:not(.pw-button-loading):active {
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: $--color-primary;
+            opacity: 0.5;
+            border-radius: 100px;
+        }
+        &::after {
+            display: none;
+        }
+    }
+    &[disabled] {
+        color: $--color-white;
+        background-image: none;
+        background-color: $--button-background-color-disabled;
+    }
+    .pw-icon {
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+}
