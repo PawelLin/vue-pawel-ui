@@ -1,0 +1,52 @@
+@import 'common/var.scss';
+
+$duration: 0.3s;
+$block-x: 19px;
+
+.pw-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 31px;
+    border-radius: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: background-color $duration;
+    &::before {
+        content: '';
+        position: absolute;
+        top: -1px;
+        right: -1px;
+        bottom: -1px;
+        left: -1px;
+        border-radius: 40px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background-image: $--button-background-image-primary;
+        opacity: 0;
+        transition: opacity $duration;
+    }
+    .pw-switch-block {
+        position: absolute;
+        width: 29px;
+        height: 29px;
+        border-radius: 100%;
+        background-color: $--color-white;
+        box-shadow: 0 3px 1px 0 rgb(0 0 0 / 5%), 0 2px 2px 0 rgb(0 0 0 / 10%), 0 3px 3px 0 rgb(0 0 0 / 5%);
+        transition: transform $duration cubic-bezier(0.3, 1.05, 0.4, 1.05);
+    }
+    &-on-default {
+        &::before {
+            opacity: 1;
+        }
+        .pw-switch-block {
+            transform: translateX($block-x);  
+        }
+    }
+    &-on {
+        .pw-switch-block {
+            transform: translateX($block-x);  
+        }
+    }
+    &-disabled {
+        opacity: 0.5;
+    }
+}

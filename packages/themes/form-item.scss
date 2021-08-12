@@ -2,18 +2,21 @@
 
 .pw-form-item {
     position: relative;
-    padding: 14px 25px;
+    padding: 0 25px;
     display: flex;
+    align-items: center;
     background-color: $--color-white;
     &.pw-form-item-padding {
         padding-right: 40px;
     }
     &-label {
+        padding: 14px 0;
         margin-right: 15px;
         color: $--color-primary;
         font-size: $--font-size-medium;
     }
     &-content {
+        padding: 10px 0;
         flex: 1;
     }
     &-tip {

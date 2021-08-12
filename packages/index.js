@@ -4,13 +4,15 @@ import Icon from './icon'
 import Toast from './toast'
 import Form from './form'
 import FormItem from './form-item'
+import Switch from './switch'
 
 const components = [
     Button,
     Input,
     Icon,
     Form,
-    FormItem
+    FormItem,
+    Switch
 ]
 
 const install = function (Vue) {
@@ -29,5 +31,6 @@ export default {
     Input,
     Icon,
     Form,
-    FormItem
+    FormItem,
+    Switch
 }

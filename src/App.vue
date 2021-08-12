@@ -28,6 +28,12 @@
             <pw-form-item label="文字" arrow>
                 <div>文字</div>
             </pw-form-item>
+            <pw-form-item label="文字">
+                <pw-switch v-model="form.switch" />
+                <pw-switch v-model="form.switch" disabled />
+                <pw-switch v-model="form.switch" active-color="green" inactive-color="red" />
+                {{form.switch}}
+            </pw-form-item>
             <p class="pw-form-title">列表</p>
             <pw-form-item v-for="(item, index) in form.items" :prop="`items.${index}.a`" :label="`items.${index}.a`" :rules="{ required: true, message: `请输入items.${index}.a` }" :key="index">
                 <pw-input v-model="item.a" :placeholder="`请输入items.${index}.a`"></pw-input>
@@ -67,7 +73,8 @@ export default {
                 c: '',
                 d: '',
                 e: '',
-                items: [{ a: '' }, { a: '' }]
+                items: [{ a: '' }, { a: '' }],
+                switch: false
             },
             label: {
                 c: 'ccc'
@@ -117,6 +124,7 @@ export default {
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body {
     background-color: #f7f7f7;
