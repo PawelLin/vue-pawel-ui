@@ -1,0 +1,42 @@
+@import 'common/var.scss';
+
+.pw-form-item {
+    position: relative;
+    padding: 14px 25px;
+    display: flex;
+    background-color: $--color-white;
+    &.pw-form-item-padding {
+        padding-right: 40px;
+    }
+    &-label {
+        margin-right: 15px;
+        color: $--color-primary;
+        font-size: $--font-size-medium;
+    }
+    &-content {
+        flex: 1;
+    }
+    &-tip {
+        font-size: $--font-size-small;
+        color: $--color-orange;
+    }
+    & + .pw-form-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 25px;
+        right: 0;
+        height: 1px;
+        transform: scaleY(0.5);
+        background-color: $--button-background-color-disabled;
+    }
+    & + .pw-form-title {
+        margin-top: 10px;
+    }
+    &-arrow {
+        position: absolute;
+        right: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

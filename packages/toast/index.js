@@ -16,8 +16,12 @@ function Toast (propsData) {
     } else {
         comp = new VM({ propsData }).$mount()
         document.body.appendChild(comp.$el)
+        this.clear = () => comp.destroy(() => { comp = null })
     }
-    comp.countDownHidden()
+    comp.countDownHidden(() => {
+        comp = null
+    })
+    return this
 }
 
 export default Toast

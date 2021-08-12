@@ -1,0 +1,21 @@
+@import 'common/var.scss';
+
+.pw-form {
+    &-title {
+        padding: 10px 25px;
+        color: $--color-dark-grey;
+        font-size: $--font-size-small;
+    }
+    &-tip {
+        padding: 10px 25px;
+        font-size: $--font-size-small;
+        color: $--color-orange;
+    }
+    &-label-right .pw-form-item-label{
+        text-align: right;
+    }
+    &-content-right .pw-form-item-content {
+        text-align: right;
+    }
+    
+}

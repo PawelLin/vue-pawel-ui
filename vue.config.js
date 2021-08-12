@@ -18,6 +18,14 @@ const params = env => {
                     libraryTarget: 'umd',
                     libraryExport: 'default',
                     library: 'vue-pawel-ui'
+                },
+                externals: {
+                    vue: {
+                        root: 'Vue',
+                        commonjs: 'vue',
+                        commonjs2: 'vue',
+                        amd: 'vue'
+                    }
                 }
             },
             css: {

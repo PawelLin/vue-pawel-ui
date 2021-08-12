@@ -2,11 +2,15 @@ import Button from './button'
 import Input from './input'
 import Icon from './icon'
 import Toast from './toast'
+import Form from './form'
+import FormItem from './form-item'
 
 const components = [
     Button,
     Input,
-    Icon
+    Icon,
+    Form,
+    FormItem
 ]
 
 const install = function (Vue) {
@@ -23,5 +27,7 @@ export default {
     install,
     Button,
     Input,
-    Icon
+    Icon,
+    Form,
+    FormItem
 }

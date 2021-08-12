@@ -33,16 +33,18 @@ export default {
         }
     },
     methods: {
-        countDownHidden () {
+        countDownHidden (callback) {
             if (this.duration) {
                 setTimeout(() => {
                     this.show = false
+                    this.destroy(callback)
                 }, this.duration)
             }
         },
-        destroy () {
+        destroy (callback) {
             document.body.removeChild(this.$el)
             this.$destroy()
+            callback && callback()
         }
     }
 }

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
-// import UI from 'vue-pawel-ui'
-import UI from '../packages'
+import UI from 'vue-pawel-ui'
+// import UI from '../packages'
 // import './themes.scss'
 
 Vue.config.productionTip = false

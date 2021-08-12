@@ -1,5 +1,11 @@
 @import 'common/var.scss';
 
 .pw-input {
-    border: 1px solid $--color-yellow;
+    font-size: $--font-size-medium;
+    border: none;
+    outline: none;
+    &::-webkit-input-placeholder {
+        padding-left: 4px;
+        color: $--color-text-placeholder;
+    }
 }
